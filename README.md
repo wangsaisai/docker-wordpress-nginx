@@ -8,6 +8,12 @@ You can check out his [Apache version here](https://github.com/jbfink/docker-wor
 
 ## Installation
 
+Download codes
+```bash
+$ git clone https://github.com/wangsaisai/docker-wordpress-nginx.git
+$ cd docker-wordpress-nginx
+```
+
 Edit nginx-site.conf, configure for cert files
 ```bash
 # related configure for ssl
@@ -21,8 +27,6 @@ ssl_certificate_key /cert-path/www.example.com.key;
 Build the image:
 
 ```bash
-$ git clone https://github.com/wangsaisai/docker-wordpress-nginx.git
-$ cd docker-wordpress-nginx
 $ sudo docker build -t="wangsaisai/docker-wordpress-nginx" .
 ```
 
