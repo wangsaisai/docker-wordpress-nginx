@@ -8,6 +8,16 @@ You can check out his [Apache version here](https://github.com/jbfink/docker-wor
 
 ## Installation
 
+Edit nginx-site.conf, configure for cert files
+```bash
+# related configure for ssl
+# use your own .crt .key files
+# if you donot use ssl, remove these configure
+listen	443 ssl;
+ssl_certificate /cert-path/www.example.com.crt;
+ssl_certificate_key /cert-path/www.example.com.key;
+```
+
 Build the image:
 
 ```bash
