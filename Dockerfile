@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Eugene Ware <eugene@noblesamurai.com>
+MAINTAINER Bamboo Liu <ws6937@126.com>
 
 # Keep upstart from complaining
 RUN dpkg-divert --local --rename --add /sbin/initctl
@@ -58,6 +58,6 @@ EXPOSE 3306
 EXPOSE 80
 
 # volume for mysql database and wordpress install
-VOLUME ["/var/lib/mysql", "/usr/share/nginx/www"]
+VOLUME ["/var/lib/mysql", "/usr/share/nginx/www", "/etc/nginx"]
 
 CMD ["/bin/bash", "/start.sh"]
